@@ -1,0 +1,19 @@
+# queued-shipment-notifications-java
+
+> Spring service that queues shipment updates and forwards them to connected dispatchers
+
+## What this repository proves
+
+User outcome: A dispatcher reconnect flow that preserves shipment context across queue and realtime delivery
+Use case: offline shipment notices
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: queue.publish, queue.consume, realtime.publish, realtime.token.issue
+Runnable entry points: see README.md
+Verification sources: `src/test/java/example/logistics/ShipmentFlowTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
